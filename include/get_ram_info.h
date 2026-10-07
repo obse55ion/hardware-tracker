@@ -11,7 +11,7 @@ int get_info(){
     struct sysinfo ram_info;
     sysinfo(&ram_info);
     printf("uptime: %ld\n", ram_info.uptime / 60);
-    printf("total ram %lu\n", ram_info.totalram);
+    printf("total ram %lf\n", ram_info.totalram / (1024.0 * 1024.0 * 1024.0));
     // printf("%lu\n", ram_info.freeram);
 
     return 0;
